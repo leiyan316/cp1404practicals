@@ -15,12 +15,13 @@ CODE_TO_NAME = {
     "SA": "South Australia"
 }
 
-print(CODE_TO_NAME)
+for code, name in CODE_TO_NAME.items():
+    print(f"{code} is {name}")
 
-state_code = input("Enter short state: ")
+state_code = input("Enter short state: ").upper()
 while state_code != "":
-    if state_code in CODE_TO_NAME:
-        print(state_code, "is", CODE_TO_NAME[state_code])
-    else:
+    try:
+        print(f"{state_code} is {CODE_TO_NAME[state_code]}")
+    except KeyError:
         print("Invalid short state")
-    state_code = input("Enter short state: ")
+    state_code = input("Enter short state: ").upper()

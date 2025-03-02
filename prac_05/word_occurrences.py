@@ -1,3 +1,9 @@
+"""
+Word Occurrences
+Estimate: 20 minutes
+Actual:   10 minutes
+"""
+
 text = input("Text: ")
 words = text.split()
 
